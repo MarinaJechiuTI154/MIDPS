@@ -1,1 +1,1 @@
-# MIDPS
+# In lucrarea de laborator am intimpinat diferite dificulta?i. ?inand cont ca n-am mai lucrat niciodata cu VSR, a fost destul de greu sa in?eleg ideea utilizarii acesteia.
