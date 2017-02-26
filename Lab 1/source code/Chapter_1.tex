@@ -20,8 +20,7 @@
 	
 	La crearea repozitoriului se creează un branch implicit numit master. Însă, dacă trebuie să creăm un nou branch folosim comanda:\textit{git checkout 'denumire-branch'}. Astfel, nu doar se creează un nou branch, dar și se trece automat pe acest branch. În cazul în care dorim să trecem pe un branch deja existend, la tastarea denumirii acestuia sistemul îl recunoaște și face automat salt către acesta. 
 	
-	Deoarece repozitoriile git sunt repozitorii de tip distrib, pentru a încărca modificările efectuate local pe server este necesar penrtu a efectua următoarii pași:
-	\begin{list}{•}
+	Deoarece repozitoriile git sunt repozitorii de tip distrib, pentru a încărca modificările efectuate local pe server este necesar penrtu a efectua următoarii pași: \begin{list}{•}{}
 	\item  \textit{git add .} adăugarea în index a modificărilor realizate în directoriul meu, fișiere ce se intenționează a fi publicate.
 	\item  \textit{git commit} efectuarea commit-urilor în baza informației din index. Acestea pot conține denumiri pentru a gestiona mai ușor modificările.
 	\item \textit{git push} publicarea modificărilor pe repozitoriu.
@@ -33,7 +32,7 @@
 	
 	Uneori, vrem să facem anumite schimbări temporare, dar fără a face deodat[ commit asupra acestora. Pentru asta utilizăm comanda \textit{git stash}. Putem totodată să revenim asupra acestor modificări mai tîrziu.
 	
-	Nu întotdeauna dorim sa versionăm anumite fisiere, întrucât acestea pot conține executabile generate de procesul de compilare sau efectiv parametrii de configurare ai aplicației. Fișierele sau directoarele ce se doresc a fi ignorate de sistemul de versionare pot fi trecute într-un fișier numit .gitignore. Acesta este evaluat in mod recursiv, putand astfel avea mai multe fișiere .gitignore în folderele proiectului nostru. Cu toate acestea, pentru a nu căuta foarte mult path-urile ignorate, se folosește în mod convențional un singur astfel de fisier plasat în radacina proiectului.
+	Nu întotdeauna dorim sa versionăm anumite fisiere, întrucât acestea pot conține executabile generate de procesul de compilare sau efectiv parametrii de configurare ai aplicației. Fișierele sau directoarele ce se doresc a fi ignorate de sistemul de versionare pot fi trecute într-un fișier numit .gitignore. Acesta este evaluat in mod recursiv, putand astfel avea mai multe fișiere .gitignore în folderele proiectului nostru. Cu toate acestea, pentru a nu căuta foarte mult path-urile ignorate, se folosește în mod convențional un singur astfel de fisier plasat în radacina proiectului. În momentul în care încărcăm un fișier ce are o extensie menționată în fișierul .gitignore, acesta este pur și simplu ignorat și nu este încărcat pe repozitoriu.
 	
 	După crearea a două sau mai multe branch-uri acestea sunt dezvoltate separat, conținând informații diferite deobicei. Dacă dorim să unim aceste două branch-uri într-unul singut folosim comanda \textit{git merge}. Aceasta se va executa numai dacă între aceste branch-uri nu există conflict, adică conținutul lor este identic. Pentru a rezolva aceste conflicte trebuie sincronizate cele două branch-uri, ambele să aibă informație identică.
 	
@@ -106,4 +105,17 @@
 \caption{Implementarea tag-urilor}
 \label{fig:11}
 \end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=0.8\textwidth]{14}
+\caption{Ignorarea fișierului cu extensia .pfx, conform fișierului .gitignore}
+\label{fig:12}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=0.8\textwidth]{15}
+\caption{Fișiere ce le conține repozitoriul. Deși în lista apare fișierul ign.pfx, el nu este vizibil pe repozitoriu}
+\label{fig:13}
+\end{figure}
+
 \clearpage
