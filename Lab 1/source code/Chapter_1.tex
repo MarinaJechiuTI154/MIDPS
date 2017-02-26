@@ -1,8 +1,8 @@
 \section{Laboratory work implementation}
 
-\subsection{Analiza lucrarii de laborator}
+\subsection{Analiza lucrării de laborator}
 
-https://github.com/MarinaJechiuTI154/MIDPS
+	https://github.com/MarinaJechiuTI154/MIDPS - linkul repozitoriului.
 
 	Principalele noțiuni cu care voi opera:
 	\begin{itemize}
@@ -31,10 +31,17 @@ https://github.com/MarinaJechiuTI154/MIDPS
 	
 	Ultimul commit efectuat în repozitoriu poartă numele de HEAD. Astfel, pentru a reveni la un commit anterior este suficient să scriem în linia de comandă: \textit{git reset --hard HEAD}.
 	
-	Uneori, vrem să facem anumite schimbări temporare, dar fără a face vreodată commit asupra acestora.
+	Uneori, vrem să facem anumite schimbări temporare, dar fără a face deodat[ commit asupra acestora. Pentru asta utilizăm comanda \textit{git stash}. Putem totodată să revenim asupra acestor modificări mai tîrziu.
+	
+	Nu întotdeauna dorim sa versionăm anumite fisiere, întrucât acestea pot conține executabile generate de procesul de compilare sau efectiv parametrii de configurare ai aplicației. Fișierele sau directoarele ce se doresc a fi ignorate de sistemul de versionare pot fi trecute într-un fișier numit .gitignore. Acesta este evaluat in mod recursiv, putand astfel avea mai multe fișiere .gitignore în folderele proiectului nostru. Cu toate acestea, pentru a nu căuta foarte mult path-urile ignorate, se folosește în mod convențional un singur astfel de fisier plasat în radacina proiectului.
+	
+	După crearea a două sau mai multe branch-uri acestea sunt dezvoltate separat, conținând informații diferite deobicei. Dacă dorim să unim aceste două branch-uri într-unul singut folosim comanda \textit{git merge}. Aceasta se va executa numai dacă între aceste branch-uri nu există conflict, adică conținutul lor este identic. Pentru a rezolva aceste conflicte trebuie sincronizate cele două branch-uri, ambele să aibă informație identică.
+	
+	În istoria modificărilor pot fi marcate cele mai importante modificări cu ajutorul tag-urilor. Git-ul folosește două tipuri de tag-uri: simple și adnotate. Numele tag-urilor au următoarea formă: v0.1, v3.4 etc. Pentru a inițializa un gat adnotat introducem: \textit{git tag -a v1.2 -m ”nume-tag”}. Tag-urile adnotate sunt stocate ca obiecte complete în baza de date. Tag-ul ușor este de fapt un pointer către un anumit commit. Acesta se inițializează: textit{git tag v1.2 -lw}.
+	
 	
 \subsection{Imagini}
 
-Adauga cite cel putin o imagine (sau mai multe) pentru fiecare functionalitate adaugata.
+
 
 \clearpage
