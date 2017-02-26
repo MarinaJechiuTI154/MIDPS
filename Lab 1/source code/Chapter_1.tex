@@ -1,14 +1,38 @@
 \section{Laboratory work implementation}
 
-\subsection{Tasks and Points}
-
-	În cadrul lucrării de laborator a fost creat un repozitoriu pe github. Acesta a fost sincronizat cu repozitoriul nostru local. 
 \subsection{Analiza lucrarii de laborator}
 
-Adauga link la repozitoriul tau.
-Explica fiecare din task-urile realizate. Explica acesta cu cuvintele tale. Cu cit mai bine va fi explicat,
-cu atit mai putine intrebari vei avea la aparare.
+https://github.com/MarinaJechiuTI154/MIDPS
 
+	Principalele noțiuni cu care voi opera:
+	\begin{itemize}
+	\item \textbf{repository}  componenta server ce conține informații privind ierarhia de fișiere și reviziile.
+	\item \textbf{branch} este o ramură secundară de dezvoltare a unui proiect.
+	\item \textbf{checkout}  preluarea în mediul local a unei anumite revizii publicate pe server.
+	\item \textbf{commit} cerere de publicare pe server a unor modificări.
+	\item \textbf{pull} acțiunea de actualizare (update) a informațiilor locale cu cele de pe server.
+	\item \textbf{conflict} apare atunci când mai mulți utilizatori vor să publice modificări aplicate acelorași fișiere din proiect, însă sistemul de aplicare a versiunilor diferite nu poate îmbina modificările.
+	\item \textbf{revert} revenirea la o versiune anterioară pe un anume fir de dezvoltare (branch).
+	\item \textbf{tag} branch “read-only” ce nu mai permite modificări ulterioare (folosit uneori pentru versiunile stabile și derivă dintr-un branch)
+	\end{itemize}
+	
+	Am creat un cont public pe github cu denumirea mdps. Pentru a putea gestiona repozitoriul am instalat GitBash. Pentru a activa contul avem nevoie sș introducem în  setări cheia, care se obține prin tastarea în linia de comandă: ssh-keygen. Pentru a deschide cheia obținută folosim următoarele instrucțiuni:  cat ~ /.ssh /id - rsa.pub. Pentru a face legătura între repozitoriul pe github și cel local este necesar să clonăm repozitoriul online cu instrucțiune: \textit{git clone}.
+	
+	La crearea repozitoriului se creează un branch implicit numit master. Însă, dacă trebuie să creăm un nou branch folosim comanda:\textit{git checkout 'denumire-branch'}. Astfel, nu doar se creează un nou branch, dar și se trece automat pe acest branch. În cazul în care dorim să trecem pe un branch deja existend, la tastarea denumirii acestuia sistemul îl recunoaște și face automat salt către acesta. 
+	
+	Deoarece repozitoriile git sunt repozitorii de tip distrib, pentru a încărca modificările efectuate local pe server este necesar penrtu a efectua următoarii pași:
+	\begin{list}{•}
+	\item  \textit{git add .} adăugarea în index a modificărilor realizate în directoriul meu, fișiere ce se intenționează a fi publicate.
+	\item \textit{git commit} efectuarea commit-urilor în baza informației din index. Acestea pot conține denumiri pentru a gestiona mai ușor modificările.
+	\item \textit{git push} publicarea modificărilor pe repozitoriu.
+	\end{list}
+	
+	Pentru a putea face push pe branch-urile create, este necesar ca acestea să fie setate to track a remote origin. Pentru asta vom folosi comanda: \textit{git push -u origin den-branch}. 
+	
+	Ultimul commit efectuat în repozitoriu poartă numele de HEAD. Astfel, pentru a reveni la un commit anterior este suficient să scriem în linia de comandă: \textit{git reset --hard HEAD}.
+	
+	Uneori, vrem să facem anumite schimbări temporare, dar fără a face vreodată commit asupra acestora.
+	
 \subsection{Imagini}
 
 Adauga cite cel putin o imagine (sau mai multe) pentru fiecare functionalitate adaugata.
