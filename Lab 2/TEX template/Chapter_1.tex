@@ -25,86 +25,95 @@
 	
 	\textbf{Butonul "+"}
 	
-	this.plusButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-	
-    this.plusButton.Location = new System.Drawing.Point(185, 42);
-    
-    this.plusButton.Name = "plusButton";
-    
-    this.plusButton.Size = new System.Drawing.Size(42, 34);
-    
-    this.plusButton.TabIndex = 0;
-    
-    this.plusButton.Text = "+";
-    
-    this.plusButton.UseVisualStyleBackColor = true;
-    
-    this.plusButton.Click += new System.EventHandler(this.plusButton_Click);
-
+	   private void plusButton_Click(object sender, EventArgs e)
+	   
+        {
+        
+            number01 = float.Parse(numbersTextBox.Text);
+            
+            numbersTextBox.Text = "";
+            
+            plusButtonCounter++;
+            
+        }
 	
 	\textbf{Butonul "="}
 	
-	this.equalButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-    
-    this.equalButton.Location = new System.Drawing.Point(185, 176);
-    
-    this.equalButton.Name = "equalButton";
-    
-    this.equalButton.Size = new System.Drawing.Size(42, 30);
-    
-    this.equalButton.TabIndex = 1;
-    
-    this.equalButton.Text = "=";
+	private void equalButton_Click(object sender, EventArgs e)
+        
+        {
+            number02 = float.Parse(numbersTextBox.Text);
+            
+            if (plusButtonCounter == 1)
+            
+            { 
+                numbersTextBox.Text = "" + (number01 + number02);
+                
+                plusButtonCounter = 0;
+                
+            }
+           
+            else if (minusButtonCounter == 1)
+            {
+                
+                numbersTextBox.Text = "" + (number01 - number02);
+               
+                minusButtonCounter = 0;
+                
+            }
+            
+            else if (multiplyButtonCounter == 1)
+            
+            {
+               
+                numbersTextBox.Text = "" + (number01 * number02);
+               
+                multiplyButtonCounter = 0;
+                
+            }
+            
+            else if (divideButtonCounter == 1)
+            
+            {
+                
+                if (number02 == 0)
+                
+                {
+                    
+                    MessageBox.Show("Nu se admite impartirea la 0!");
+                    
+                }
+                
+                else
+                
+                {
+                    
+                    numbersTextBox.Text = "" + (number01 / number02);
+                  
+                    divideButtonCounter = 0;
+                }
+            }
+        }
    
-   this.equalButton.UseVisualStyleBackColor = true;
+   \textbf{Butonul "C"}
    
-   this.equalButton.Click += new System.EventHandler(this.equalButton_Click);
+  private void clearButton_Click(object sender, EventArgs e)
+        
+        {
+           
+            numbersTextBox.Text = numbersTextBox.Text.Substring(0, numbersTextBox.Text.Length - 1);
+       
+        }
+
+        private void clearenterButton_Click(object sender, EventArgs e)
+        
+        {
+            
+            numbersTextBox.Text = "";
+            
+        }
    
-  
-   \textbf{Butonul "x^2"}
-   
-   
-   this.putButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-   
-   this.putButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, 
-   
-   System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-   
-   this.putButton.Location = new System.Drawing.Point(185, 10);
-   
-   this.putButton.Name = "putButton";
-  
-   this.putButton.Size = new System.Drawing.Size(41, 32);
-   
-   this.putButton.TabIndex = 5;
-   
-   this.putButton.Text = "x^2";
-   
-   this.putButton.UseVisualStyleBackColor = true;
-   
-   this.putButton.Click += new System.EventHandler(this.putButton_Click);
-   
-   \textbf{Butonul "x^(1/2)"}
-   
-	this.radButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-    
-    this.radButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, 	
-    
-    System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-    
-    this.radButton.Location = new System.Drawing.Point(122, 10);
-    
-    this.radButton.Name = "radButton";
-    
-    this.radButton.Size = new System.Drawing.Size(55, 63);
-    
-    this.radButton.TabIndex = 4;
-    
-    this.radButton.Text = "^1/2";
-    
-    this.radButton.UseVisualStyleBackColor = true;
-    
-    this.radButton.Click += new System.EventHandler(this.radButton_Click);
+
     
 \subsection{Imagini}
 
