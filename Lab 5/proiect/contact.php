@@ -13,10 +13,16 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">		
+	<style>
+		#content {
+			color: orange;
+			text-shadow: 1px 1px 1px black
+		}
+	</style>
 </head>
 <body>
+
 	<div id="wrapper">
 		<div class="row">
 			<div class="col col-md-5"></div>
@@ -46,8 +52,8 @@
 					      <div class="modal-body">
 					      	<div class="form-group">
 					      		<div class="container">
-								    <form class="form-horizontal" method="post" action="about.php">
-								    
+								    <form class="form-horizontal" method="post" action="index.php">
+			
 								     <div class="form-group has-success">
 								      <label for="text" class="col-sm-2 control-label">User</label>
 								      <div class="col-sm-3">
@@ -76,7 +82,7 @@
 								     	<div class="col col-md-3"></div>
 								     	<button type="submit" name="submit" class="btn btn-info">Submit</button>
 								     </div>
-								        <div style="margin-left: 175px;">
+								    <div style="margin-left: 175px;">
 								      <?php
               					if(isset($_SESSION['message'])) {
                   				  echo "<div style='color:#FF0000';id='error_msg'>".$_SESSION['message']."</div>";
@@ -189,6 +195,8 @@
 
 
 	 
+	 <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <!-- Latest compiled and minified JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </body>

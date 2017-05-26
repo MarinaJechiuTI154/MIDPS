@@ -7,22 +7,15 @@
 \textbf{Advanced Level (nota 9 - 10):}
 Dezvoltarea unei aplicatii:
 
-Desktop
-
-Mobile
-
-Web
-
-Browser Extension
-
-Game development (web, mobile, desktop)
-
-Service application
-
-Internet application
-
-Client application
-
+\begin{enumerate}
+\item  Mobile
+\item  Web
+\item  Browser Extension
+\item  Game development (web, mobile, desktop)
+\item  Service application
+\item  Internet application
+\item  Client application
+\end{enumerate}Desktop
 
 
 \subsection{Analiza lucrarii de laborator}
@@ -33,20 +26,37 @@ https://github.com/MarinaJechiuTI154/MIDPS
 
 	Cobîlaș Vasile
 	\begin{itemize}
-	\item crearea frontend-ului;
+	\item crearea front-end-ului;
 	\end{itemize}
 	
-	Pentru crearea paginilor a fost utilizat limbajul HTML. Pentru stilizare a fost implementate funcții ale limbajului CSS și JavaScript. Pentru efecte mai interesante s-a utilizat plugin-ul Stellar.js pentru mai multe efecte ale elementelor scroll. Pentru simplificarea lucrului cu animațiile și evenimentele a fost utilizată biblioteca jQwery.
-	Legătura cu baza de date a fost asigurată cu ajutorul limbajului PHP. Au fost create pagini statice pentru logare și înregistrare, iar datele au fost stocate în baza de date authentication, tabelul users, alcătuit din 4 câmpuri:
+	Popușoi Victor
 	\begin{itemize}
-	\item \textit{id} - atribuit automat în baza de date, autoindexându-se, fiindă asigurată unicitatea;
-	\item \textit{username} - ales de utilizator și stocat conform alșegerii acestuia. Nu a fost asigurată unicitatea username-ului;
-	\item textit{email} - ales de utilizator și stocat conform alșegerii acestuia. Nu a fost asigurată unicitatea email-ului;
-	\item textit{password} - ales de utilizator și stocat conform alșegerii acestuia. Nu a fost asigurată unicitatea sau anumite condiții de securitate a parolei;
+	\item implementarea algoritmului jocului Yahtzee;
+	\item crearea posibilitatii de inregistrare,logare,logout a utilizatorului;
+	\item salvarea datelor despre utilizator in baza de date;
 	\end{itemize}
+	
+	Jechiu Marina
+	\begin{itemize}
+	\item salvarea rezultatelor jocului în baza de date;
+	\item crearea paginii Top 10 players;
+	\item crearea paginii de contacte;
+	\item efectuarea merge-ului și rezolvarea conflictelor;
+	\end{itemize}
+	
+	În lucrare de laborator nr.5 s-a realizat un joc care se numește Yahtzee .
+Este un joc cu zaruri unde scopul principal este acumularea a cât mai multe puncte, facând diferite
+combinații de zaruri. Este considerat un joc extrem de ușor și foarte relaxant. Sunt 5 zaruri,
+3 incercări și 13 combinații.Fiecare combinație validă de zaruri are un punctaj
+diferit, unele combinații au un număr fix de puncte, iar altele au un număr de puncte egal cu suma
+valorilor de pe zaruri. Subjocul Yahtzee înseamnă că jucătorul să aibă cinci zaruri la fel, de aceeași valoare, fiind cel mai bine punctată combinație din joc, valoarea punctelor castigate fiind de 50.
 
-	În momentul logării se face legătura cu baza de date și se verifică dacă există înregistrare cu asemenea username și password. Dacă există asemenea utilizator, acesta este automat redirecționat spre o nouă pagină principală: my-profil.php. În caz contrar, trebuie reintroduse datele de acces.
-	Pentru interschimbarea datelor între paginile statice și JavaScript a fost folosite avantajele JSON (JavaScript Object Notation). Setul de tehnologii Ajax a fost implementat pentru a efectua o cerere la server. 
+	Salvarea rezultatelor jocului se efectuează la sfârșitul jocului în baza de date yahtzee, în tabelul results. Acest tabel conține 3 câmpuri: id, username și score. Usernam-ul este dat de valoarea curentă a useru-ului logat, iar rezultatul de punctajul total ales de acesta. 
+	
+	Pagina de top conține un tabel din 10 câmpuri, care extrage rezultatele cele mai mari ale jucătorilor, obținute în urma jocului. Dacă în tabelul results apar noi date, tabelul cu topul se actualizează la un refresh al paginii.
+	
+	Pagina de contacte conține datele de contact ale administratorilor și o secțiune ce permite transmiterea feedback-urilor sub formă de mesaje.
+
 	
 \subsection{Imagini}
 % Exemplu de figura cu titlu, si referinta, label
@@ -54,7 +64,7 @@ https://github.com/MarinaJechiuTI154/MIDPS
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=1.0\textwidth]{1}
-\caption{Pagina principală}
+\caption{Pagina top players}
 
 \end{figure}
 
@@ -62,44 +72,24 @@ https://github.com/MarinaJechiuTI154/MIDPS
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=1.0\textwidth]{2}
-\caption{Pagina de înregistrare}
+\caption{Pagina de contacte}
 
 \end{figure}
 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=1.0\textwidth]{3}
-\caption{Pagina de logare}
+\caption{Pagina de joc}
 
 \end{figure}
 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=1.0\textwidth]{4}
-\caption{Pagina principală după logare}
+\caption{Pagina about}
 
 \end{figure}
 
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=1.0\textwidth]{5}
-\caption{Portofoliu}
-
-\end{figure}
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=1.0\textwidth]{6}
-\caption{Feed back}
-
-\end{figure}
-
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=1.0\textwidth]{7}
-\caption{Baza de date }}
-
-\end{figure}
 % Exemplu de listing. Cum sa adaugi cod sursa in functie de limbajul de programare
 
 

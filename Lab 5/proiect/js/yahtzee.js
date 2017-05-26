@@ -1,4 +1,4 @@
-//are loc schimbul de biti
+
 var SMALL_STRAIGHT_MASK1 = (1 << 0) + (1 << 1) + (1 << 2) + (1 << 3);
 var SMALL_STRAIGHT_MASK2 = (1 << 1) + (1 << 2) + (1 << 3) + (1 << 4);
 var SMALL_STRAIGHT_MASK3 = (1 << 2) + (1 << 3) + (1 << 4) + (1 << 5);
@@ -8,10 +8,13 @@ var INCOMPLETE_STRAIGHT_MASK1 = (1 << 0) + (1 << 1) + (1 << 2);
 var INCOMPLETE_STRAIGHT_MASK2 = (1 << 1) + (1 << 2) + (1 << 3);
 var INCOMPLETE_STRAIGHT_MASK3 = (1 << 2) + (1 << 3) + (1 << 4);
 var INCOMPLETE_STRAIGHT_MASK4 = (1 << 3) + (1 << 4) + (1 << 5);
-Yahtzee = {	
+
+Yahtzee = {
+		
 		launch : 0,
 		dices : [],
 		combinaisons : [],
+		
 		pair : false,
 		doublePair : false,
 		three_of_a_kind : false,
@@ -22,6 +25,7 @@ Yahtzee = {
 		large_straight : false,
 		total_score : false,
 		straight : 0,
+
 		scoreUp : 0,
 		scoreDown: 0,
 		keptCombinaisons: [],
@@ -41,7 +45,6 @@ Yahtzee = {
 			Yahtzee.straight = 0;
 			
 			if( all )
-				//reseteaza zarurile 
 				for( var i = 0; i < 5; i++ ) {
 					Yahtzee.dices[i] = 0;
 					$("#dice" + (i+1)).removeClass().addClass("dice").addClass("empty");
@@ -55,18 +58,16 @@ Yahtzee = {
 				$(elt).removeClass("possibility");
 				$(elt).empty();
 			});
-			//sterge keep dupa selectare
+			
 			$(".keep").each(function(incr, elt) {
 				$(elt).attr('style', 'visibility:hidden;');
 			})
-			// sterge tash dupa selectare
 			$(".trash").each(function(incr, elt) {
 				$(elt).attr('style', 'visibility:hidden;');
 			})
 		},
 		
 		shuffle: function() {
-			// nu permite sa arunci zarurile mai multe de 3 ori
 			if($("#launchBtn").hasClass("disabled") )
 				return false;
 			
@@ -76,16 +77,16 @@ Yahtzee = {
 				Yahtzee.clear(false);
 			
 			Yahtzee.launch++;
-			// functia pentru aruncarea random a zarurilor
+			
 			for( var i = 0; i < 5; i++ ) {
 				var html = $("#dice" + (i+1));
 				if( !html.hasClass("selected") ) {
-					var value = Math.round(5*Math.random());
+					var value = Math.round(5 * Math.random());
 					Yahtzee.dices[i] = value;
 					html.removeClass().addClass("dice").addClass("face" + (value + 1));
 				}
 			}
-			// conditia ca ai voie doar de 3 ori sa arunci zarurile
+			
 			$("#launch").html(Yahtzee.launch);
 			if( Yahtzee.launch == 3 )
 				$("#launchBtn").addClass("disabled");
@@ -253,15 +254,6 @@ Yahtzee = {
 			$("#lowerScore").append(Yahtzee.scoreDown);
 			$("#upperScore").append(Yahtzee.upperScore);
 			$("#totalScore").append(Yahtzee.scoreDown + Yahtzee.scoreUp);
-			<?php
-//conectare la baza de date
-					$db=mysqli_connect("localhost","root","","yahtzee");
-					$txt = @$_SESSION['username'];
-					$totalScore=totalScore;
-					        $sql="INSERT INTO results(username, score) VALUES('$txt', '$x')"; 
-					        mysqli_query($db,$sql);  
-					  
-					?>
 			$("#scorePanel").show();
 		}
 		

@@ -6,7 +6,7 @@
 					<li class="item"><a href="about.php">About Yahtzee</a></li>
 					<li class="item"><a href="Game.php">Game</a></li>
 					<li class="item"><a href="TOP_PL.php">Top Players</a></li>
-					<li class="item"><a href="#">Contact</a></li>
+					<li class="item"><a href="contact.php">Contact</a></li>
 				</ul>
 				</div>
 	  <div style="margin-top: 15px; ">

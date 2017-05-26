@@ -1,7 +1,6 @@
 <?php require 'register.php' ?>
 <?php require 'login.php' ?>
 <?php require 'logout.php' ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,10 +16,8 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 		<link href='http://fonts.googleapis.com/css?family=Zeyada' rel='stylesheet' type='text/css'>
-        <!-- script src="lib/jquery-1.7.1.min.js" type="text/javascript" ></script -->
+        <script src="lib/jquery-1.7.1.min.js" type="text/javascript" ></script>
 		<link href="css/yahtzee.css" type="text/css" rel="stylesheet" media="screen, projection" />
-	 <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 </head>
 <body>
 	<div id="wrapper">
@@ -36,8 +33,8 @@
 			<div class="col col-md-1"></div>
 			<div class="col col-md-9">
 				<div class="form-group">
-				<?php require 'header.php' ?>
-				</div>
+					<?php require 'header.php' ?>
+				</div>			
 			</div>
 			<div class="col col-md-2">
 				<div class="btn-group btn-group-vertical btn-group-sm">
@@ -52,7 +49,7 @@
 					      <div class="modal-body">
 					      	<div class="form-group">
 					      		<div class="container">
-								    <form class="form-horizontal" method="post" action="Game.php">
+								    <form class="form-horizontal" method="post" action="Rules.php">
 								     <div class="form-group has-success">
 								      <label for="text" class="col-sm-2 control-label">User</label>
 								      <div class="col-sm-3">
@@ -79,9 +76,9 @@
 								     </div>
 								     <div class="row">
 								     	<div class="col col-md-3"></div>
-								     	<button type="submit" name="submit" class="btn btn-info">Submit</button>			
+								     	<button type="submit" name="submit" class="btn btn-info">Submit</button>
 								     </div>
-								     <div style="margin-left: 175px;">
+								    <div style="margin-left: 175px;">
 								      <?php
               					if(isset($_SESSION['message'])) {
                   				  echo "<div style='color:#FF0000';id='error_msg'>".$_SESSION['message']."</div>";
@@ -89,7 +86,7 @@
             					  }
           							?>
 								    </form>
-								    </div>
+								     </div>
 								</div>
 					      	</div>
 					      </div>
@@ -132,8 +129,7 @@
 					<div class="row">
 						<div class="col col-md-2"></div>
 						<div class="col col-md-6">
-						<img class="img-responsive" src="images/man.png" alt="man" width="35%">
-			<div style="font-size: 12px; margin-left: -50px; margin-top: 250px; ">
+			<div style="font-size: 12px; margin-left: -50px; margin-top: 350px; ">
 				<div class="dice empty" id="dice1"></div>
 				<div class="dice empty" id="dice2"></div>
 				<div class="dice empty" id="dice3"></div>
@@ -142,10 +138,10 @@
 				<div class="dice empty" id="dice6"></div>
 				<div class="clear"></div>
 				</div>
-				<div style="font-size: 12px;margin-left: 60px; margin-top: 0px; ">
+				<div style="font-size: 12px;margin-left: 60px; margin-top: 350px; ">
 				<button class="btn btn-warning" href="javascript:void(0)" id="launchBtn">Roll Dice</button><br>
 			</div>
-			<div style="width: 57%;font-size: 11px;float: left;  margin-left: 400px;margin-top: -512px;">
+			<div style="width: 55%;font-size: 11px;float: left;  margin-left: 405px;margin-top: -437px;">
 				<div class="col ">
 							<table class="table table-bordered table-hover table-responsive" id="tab">
 						<tr>
@@ -269,7 +265,7 @@
 				</table>
 				</div>
 				</div>
-				<div style="width: 57%;font-size: 11px;float: left; margin-left: 400px; margin-top: -116px; ">
+				<div style="width: 55%;font-size: 11px;float: left; margin-left: 405px; margin-top: -41px; ">
 				<div class="col ">
 							<table class="table table-bordered table-hover table-responsive" id="tab">
 					<thead>
@@ -396,7 +392,6 @@
 								</td>
 								<td></td>
 							</tr>
-							<form method="post">
 							<tr>
 								<td>
 									<span id="total_score">
@@ -404,16 +399,12 @@
 									</span>
 								</td>
 								<td style="text-align: center; color: blue;">
-									<span id="totalScore" name="totalScore" class="score">&nbsp;</span>
-								</td>
-								<td>
-									<button id="totalScore" type="totalScore" name="submitscore" class="show_game_over">Save</button>	
+									<span id="totalScore" class="score">&nbsp;</span>
 								</td>
 							</tr>
-						</form>
+						
 					</tbody>
 				</table>
-				
 				</div>
 			</div>
 		</div>
@@ -453,8 +444,5 @@
 			</div>
 		</div>
 	</div>
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
 </body>
 </html>
