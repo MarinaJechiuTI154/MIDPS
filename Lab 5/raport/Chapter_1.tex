@@ -1,0 +1,115 @@
+\section{Laboratory work implementation}
+
+\subsection{Tasks and Points}
+
+În lucrarea de laborator dată au fost realizate următoarele sarcini:
+\begin{enumerate}
+\textbf{Advanced Level (nota 9 - 10):}
+Dezvoltarea unei aplicatii:
+
+Desktop
+
+Mobile
+
+Web
+
+Browser Extension
+
+Game development (web, mobile, desktop)
+
+Service application
+
+Internet application
+
+Client application
+
+
+
+\subsection{Analiza lucrarii de laborator}
+
+https://github.com/MarinaJechiuTI154/MIDPS
+	
+	Pentru crearea acestui proiect, membrii echipei au avut următoarele responsabilități:
+
+	Cobîlaș Vasile
+	\begin{itemize}
+	\item crearea frontend-ului;
+	\end{itemize}
+	
+	Pentru crearea paginilor a fost utilizat limbajul HTML. Pentru stilizare a fost implementate funcții ale limbajului CSS și JavaScript. Pentru efecte mai interesante s-a utilizat plugin-ul Stellar.js pentru mai multe efecte ale elementelor scroll. Pentru simplificarea lucrului cu animațiile și evenimentele a fost utilizată biblioteca jQwery.
+	Legătura cu baza de date a fost asigurată cu ajutorul limbajului PHP. Au fost create pagini statice pentru logare și înregistrare, iar datele au fost stocate în baza de date authentication, tabelul users, alcătuit din 4 câmpuri:
+	\begin{itemize}
+	\item \textit{id} - atribuit automat în baza de date, autoindexându-se, fiindă asigurată unicitatea;
+	\item \textit{username} - ales de utilizator și stocat conform alșegerii acestuia. Nu a fost asigurată unicitatea username-ului;
+	\item textit{email} - ales de utilizator și stocat conform alșegerii acestuia. Nu a fost asigurată unicitatea email-ului;
+	\item textit{password} - ales de utilizator și stocat conform alșegerii acestuia. Nu a fost asigurată unicitatea sau anumite condiții de securitate a parolei;
+	\end{itemize}
+
+	În momentul logării se face legătura cu baza de date și se verifică dacă există înregistrare cu asemenea username și password. Dacă există asemenea utilizator, acesta este automat redirecționat spre o nouă pagină principală: my-profil.php. În caz contrar, trebuie reintroduse datele de acces.
+	Pentru interschimbarea datelor între paginile statice și JavaScript a fost folosite avantajele JSON (JavaScript Object Notation). Setul de tehnologii Ajax a fost implementat pentru a efectua o cerere la server. 
+	
+\subsection{Imagini}
+% Exemplu de figura cu titlu, si referinta, label
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1.0\textwidth]{1}
+\caption{Pagina principală}
+
+\end{figure}
+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1.0\textwidth]{2}
+\caption{Pagina de înregistrare}
+
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1.0\textwidth]{3}
+\caption{Pagina de logare}
+
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1.0\textwidth]{4}
+\caption{Pagina principală după logare}
+
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1.0\textwidth]{5}
+\caption{Portofoliu}
+
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1.0\textwidth]{6}
+\caption{Feed back}
+
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1.0\textwidth]{7}
+\caption{Baza de date }}
+
+\end{figure}
+% Exemplu de listing. Cum sa adaugi cod sursa in functie de limbajul de programare
+
+
+
+% Exemplu de tabel. El poate fi efectuat si exportat in forma online: 
+% http://www.tablesgenerator.com/
+
+
+
+
+
+
+\clearpage
